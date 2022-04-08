@@ -1,0 +1,25 @@
+    <section>
+        <div class="container mt-4">
+            
+                
+                    <div class="row row-cols-1 row-cols-md-4 g-3">
+                        {{#each courses}}
+                        <div class="col">
+                            <div class="card h-100">
+                                <img src="/course-images/{{this._id}}.png"
+                                    class="card-img-top " style="height: 10rem;" alt="course-profile">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{this.course}}</h5>
+                                    <p class="card-text">{{this.about}}</p>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="#" class="btn btn-primary">{{this.price}}</a>
+                                    <a href="#" class="btn btn-primary">get</a>
+                                </div>
+                            </div>
+                        </div>
+                        {{/each}}
+                    </div>
+            
+        </div>
+    </section>
