@@ -14,12 +14,18 @@
                     <input type="number" name="price" class="form-control" value="{{course.price}}">
 
                     <label for="">Image</label> <br>
-                    <img src="/course-images/{{course._id}}.png" alt="tumb image">
-                    <input name="Image" type="file" class="form-control" style="width: 200px; padding:20px;">
+                    <img src="/course-images/{{course._id}}.png" style="max-width: 700px; height:auto; padding:20px;"  alt="tumb image" id="imgView">
+                    <input name="Image" type="file" class="form-control" onchange="viewImage(event)">
 
                     <button type="submit" class="btn btn-success mt-4">Submit</button>
                 </form>
             </div>
         </div>
     </div>
-</section>
+</section>  
+<script>
+    function viewImage(event){
+        console.log('changing image to new...')
+        document.getElementById('imgView').src=URL.createObjectURL(event.target.files[0])
+    }
+</script>
