@@ -15,7 +15,6 @@ const  verifyLogin=(req,res,next)=>{
 router.get('/', function (req, res, next) {
   let user=req.session.user
   courseHelper.getAllCourse().then((courses)=>{
-    console.log(courses);
     res.render('user/view-course', {courses,user})
   })
 });

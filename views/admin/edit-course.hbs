@@ -1,0 +1,25 @@
+<section>
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="text-center"> Edit <span style="color: rgb(0, 4, 255);font-size:40px;">{{course.course}}</span></h2>
+                <form action="/admin/edit-course/{{course._id}}" method="post" enctype="multipart/form-data">
+                    <label for="">Course</label>
+                    <input type="text" name="course" class="form-control" value="{{course.course}}">
+
+                    <label for="">About</label>
+                    <input type="text" name="about" class="form-control" value="{{course.about}}">
+
+                    <label for="">Price</label>
+                    <input type="number" name="price" class="form-control" value="{{course.price}}">
+
+                    <label for="">Image</label> <br>
+                    <img src="/course-images/{{course._id}}.png" alt="tumb image">
+                    <input name="Image" type="file" class="form-control" style="width: 200px; padding:20px;">
+
+                    <button type="submit" class="btn btn-success mt-4">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
