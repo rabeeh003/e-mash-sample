@@ -1,6 +1,6 @@
 <section>
-    <div class="container mt-4">
-        <div class="row">
+    <div class="container-fluid mt-4" style="padding-left: 6rem;">
+        <div class="">
             <div class="col-md-6">
                 <h2 class="text-center"> Edit <span style="color: rgb(0, 4, 255);font-size:40px;">{{course.course}}</span></h2>
                 <form action="/admin/edit-course/{{course._id}}" method="post" enctype="multipart/form-data">
@@ -16,6 +16,10 @@
                     <label for="">Image</label> <br>
                     <img src="/course-images/{{course._id}}.png" style="max-width: 700px; height:auto; padding:20px;"  alt="tumb image" id="imgView">
                     <input name="Image" type="file" class="form-control" onchange="viewImage(event)">
+
+                    
+                    
+
 
                     <button type="submit" class="btn btn-success mt-4">Submit</button>
                 </form>

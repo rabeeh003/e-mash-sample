@@ -61,9 +61,13 @@ router.get('/logout',(req,res)=>{
   res.redirect('/')
 })
 
-router.get('/myClass',verifyLogin,(req,res)=>{
-  res.render('user/myClass')
-})
+router.get('/about-course/:id', (req,res)=> {
+  let cosId=req.params
+  let user=req.session.user
+  courseHelper.getCourseDetails(cosId).then((course)=>{
+    res.render('user/about-course', {course,user})
+  })
+});
 
 
 

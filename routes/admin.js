@@ -30,9 +30,7 @@ router.post('/add-course',(req,res)=>{
 })
 router.get('/delete-course/:id',(req,res)=>{
   let cosId=req.params.id
-  console.log(cosId);
   courseHelper.deleteCourse(cosId).then((response)=>{
-    console.log('ivide ethiyo');
     res.redirect('/admin/')
   })
 })

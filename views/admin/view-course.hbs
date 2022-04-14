@@ -1,6 +1,6 @@
 <section>
-    <div class="container">
-        <div class="row mt-4">
+    <div class="container-fluid " style="padding-left: 8rem; padding-right: 3rem;">
+        <div class="row mt-4 " >
             <a href="/admin/add-course" class="btn btn-success ml-auto">Add Course</a>
         </div>
         <table class="table mt-4">
@@ -22,9 +22,9 @@
                     <td>{{this.price}}</td>
                     <td><img style="width: 50px; max-height: 50px;" src="/course-images/{{this._id}}.png " alt="course image"></td>
                     <td>
-                        <a href="/admin/edit-course/{{this._id}}" class="btn" style="color: blue;">Edit</a>
+                        <a href="admin/edit-course/{{this._id}}" class="btn" style="color: blue;">Edit</a>
                         {{!-- ith qurry yilum codukkam--}}
-                        <a href="/admin/delete-course/{{this._id}}" class="btn" style="color: red;" onclick="return confirm('Are you want to delete {{this.name}} ?')">Delete</a>
+                        <a href="delete-course/{{this._id}}" class="btn" style="color: red;" onclick="return confirm('Are you want to delete {{this.name}} ?')">Delete</a>
                     </td>
                 </tr>
                 {{/each}}
